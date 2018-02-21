@@ -27,7 +27,8 @@ class Robot
   end
 
   def advance
-    @coordinates[1] += 1
+    @coordinates[1] += 1 if @direction == :north
+    @coordinates[0] += 1 if @direction == :east
   end
 
   def bearing

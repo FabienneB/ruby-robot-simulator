@@ -89,7 +89,6 @@ class RobotTurningTest < Minitest::Test
   end
 
   def test_advance_when_facing_east
-    skip
     robot.at(0, 0)
     robot.orient(:east)
     robot.advance
