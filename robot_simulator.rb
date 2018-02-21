@@ -26,6 +26,10 @@ class Robot
     @coordinates
   end
 
+  def advance
+    @coordinates[1] += 1
+  end
+
   def bearing
     @direction
   end
