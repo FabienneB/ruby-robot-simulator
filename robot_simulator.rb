@@ -1,4 +1,5 @@
 class Robot
+  attr_accessor :direction, :coordinates
 
   def orient(direction)
     @my_directions = [:north, :east, :south, :west]
@@ -14,7 +15,6 @@ class Robot
 
   def turn_left
     direction_index = @my_directions.index(@direction)
-    # direction_index = @my_directions.size -1 if direction_index == 0
     @direction = @my_directions[direction_index -1]
   end
 
