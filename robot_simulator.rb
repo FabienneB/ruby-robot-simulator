@@ -30,6 +30,7 @@ class Robot
     @coordinates[1] += 1 if @direction == :north
     @coordinates[0] += 1 if @direction == :east
     @coordinates[1] += -1 if @direction == :south
+    @coordinates[0] += -1 if @direction == :west
   end
 
   def bearing
