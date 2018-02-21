@@ -1,3 +1,5 @@
+require_relative 'robot_simulator'
+
 class Simulator
   def instructions(letters)
     @orientations = []
@@ -13,12 +15,19 @@ class Simulator
     @orientations
   end
 
-  # def place(robot, hash = {})
-  #   @coordinates = [-2, 1]
-  #   @direction = :east
-  # end
+  def place(robot, hash = {})
+    robot.orient(hash[:direction])
+    robot.at(hash[:x], hash[:y])
+  end
 
-  # def evaluate(robot, letters)
-  #   letters.split('').map { |letter| instructions(letter) }
-  # end
+  def evaluate(robot, letters)
+    @orientations = instructions(letters)
+    @orientations.each do |orientation|
+      robot.turn_left if orientation == :turn_left
+      robot.turn_right if orientation == :turn_right
+      robot.advance if orientation == :advance
+    end
+    return @coordinates
+  end
 end
+
