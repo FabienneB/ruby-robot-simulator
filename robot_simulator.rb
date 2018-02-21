@@ -8,6 +8,7 @@ class Robot
 
   def turn_right
     direction_index = @my_directions.index(@direction)
+    direction_index = -1 if direction_index + 1 == @my_directions.size
     @direction = @my_directions[direction_index + 1]
   end
 
