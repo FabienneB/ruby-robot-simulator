@@ -1,12 +1,14 @@
 class Simulator
   def instructions(letter)
     if letter == 'L'
-      element = :turn_left
+      orientation = [:turn_left]
     elsif letter == 'R'
-      element = :turn_right
+      orientation = [:turn_right]
     elsif letter == 'A'
-      element = :advance
+      orientation = [:advance]
+    elsif letter == 'RAAL'
+      orientation = [:turn_right, :advance, :advance, :turn_left]
     end
-    [element]
+    orientation
   end
 end
