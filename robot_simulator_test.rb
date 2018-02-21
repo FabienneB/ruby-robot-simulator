@@ -125,7 +125,6 @@ class RobotSimulatorTest < Minitest::Test
   end
 
   def test_instructions_for_advancing
-    skip
     assert_equal [:advance], simulator.instructions('A')
   end
 

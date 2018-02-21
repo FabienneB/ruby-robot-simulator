@@ -4,6 +4,8 @@ class Simulator
       element = :turn_left
     elsif letter == 'R'
       element = :turn_right
+    elsif letter == 'A'
+      element = :advance
     end
     [element]
   end
