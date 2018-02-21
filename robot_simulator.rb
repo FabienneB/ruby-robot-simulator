@@ -18,6 +18,14 @@ class Robot
     @direction = @my_directions[direction_index -1]
   end
 
+  def at(x, y)
+    @coordinates = [x, y]
+  end
+
+  def coordinates
+    @coordinates
+  end
+
   def bearing
     @direction
   end
