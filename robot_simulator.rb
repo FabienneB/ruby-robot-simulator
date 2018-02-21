@@ -12,6 +12,12 @@ class Robot
     @direction = @my_directions[direction_index + 1]
   end
 
+  def turn_left
+    direction_index = @my_directions.index(@direction)
+    # direction_index = @my_directions.size -1 if direction_index == 0
+    @direction = @my_directions[direction_index -1]
+  end
+
   def bearing
     @direction
   end
