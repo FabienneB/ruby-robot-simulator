@@ -1,5 +1,4 @@
 class Robot
-  attr_accessor :direction, :coordinates, :my_directions
 
   def orient(direction)
     @my_directions = [:north, :east, :south, :west]
